@@ -25,6 +25,8 @@
 - slurp
 - waybar
 - swappy
+- rust-wayland-commons-devel(building [swaylock-effects](https://github.com/mortie/swaylock-effects))
+- libxkbcommon-devel
 
 ## Dependencies needed for building packages below
 - cairo-devel
