@@ -1,0 +1,6 @@
+# Input
+# Keyboard
+input * {
+	xkb_layout "br"
+	xkb_options "compose:rctrl"
+}

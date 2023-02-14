@@ -6,9 +6,13 @@
 * **Launcher** • [Rofi ](https://github.com/davatorium/rofi) 
 * **File Manager** • [Ranger ](https://github.com/ranger/ranger)
 
-## 🌸 Setup
+## 🌸 Hyprland Setup
 
-<img src="screenshot.png">
+<img src="hyprland.png">
+
+## Sway Setup
+
+<img src="sway.png">
 
 ### Install steps will be finished later! They will be added below.
 <details>
