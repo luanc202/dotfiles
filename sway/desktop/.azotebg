@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+pkill swaybg
+swaybg -o DP-3 -i '/home/luan/.wallpaper/catalina-night.jpg' -m fill &
+swaybg -o HDMI-A-1 -i '/home/luan/.wallpaper/mazda.jpg' -m fill &

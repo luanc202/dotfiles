@@ -1,0 +1,81 @@
+# Logo key. Use Mod1 for Alt.
+set $mod Mod4
+
+# Virtual X11 Monitor
+set $xwaylandMonitor XWAYLAND0
+
+# Monitors
+set $monitorMiddle DP-3
+set $monitorRight HDMI-A-1
+
+# Home row direction keys, like vim
+set $left h
+set $down j
+set $up k
+set $right l
+
+# Your preferred terminal emulators
+set $term-float alacritty
+
+# Your preferred application launcher
+# Note: pass the final command to swaymsg so that the resulting window can be opened
+# on the original workspace that the command was run on.
+set $menu wofi -c ~/.config/wofi/config -I
+
+set $launcher nwg-drawer -c 7 -is 70 -spacing 23
+
+set $powermenu nwgbar
+
+set $cheat $term-float -t cheatsheet -e micro ~/.config/sway/cheatsheet.md
+
+# Workspaces Symbols
+set $wss1 一
+set $wss2 二
+set $wss3 三
+set $wss4 四
+set $wss5 五
+set $wss6 六
+set $wss7 七
+set $wss8 八
+set $wss9 九
+set $wss10 十
+
+# Workspaces Buttons
+set $ws1 1:$wss1
+set $ws2 2:$wss2
+set $ws3 3:$wss3
+set $ws4 4:$wss4
+set $ws5 5:$wss5
+set $ws6 6:$wss6
+set $ws7 7:$wss7
+set $ws8 8:$wss8
+set $ws9 9:$wss9
+set $ws10 10:$wss10
+
+# Colors
+# Catppuccin Mocha
+set $rosewater #f5e0dc
+set $flamingo  #f2cdcd
+set $pink      #f5c2e7
+set $mauve     #cba6f7
+set $red       #f38ba8
+set $maroon    #eba0ac
+set $peach     #fab387
+set $green     #a6e3a1
+set $teal      #94e2d5
+set $sky       #89dceb
+set $sapphire  #74c7ec
+set $blue      #89b4fa
+set $lavender  #b4befe
+set $text      #cdd6f4
+set $subtext1  #bac2de
+set $subtext0  #a6adc8
+set $overlay2  #9399b2
+set $overlay1  #7f849c
+set $overlay0  #6c7086
+set $surface2  #585b70
+set $surface1  #45475a
+set $surface0  #313244
+set $base      #1e1e2e
+set $mantle    #181825
+set $crust     #11111b
