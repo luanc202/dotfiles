@@ -1,6 +1,6 @@
 #!/bin/bash
  
-entries="Active Screen Output Area Window"
+entries="Active Screen Output Area Copyarea Window"
  
 selected=$(printf '%s\n' $entries | wofi --style=$HOME/.config/wofi/style.widgets.css --conf=$HOME/.config/wofi/config.screenshot | awk '{print tolower($1)}')
  
@@ -11,6 +11,8 @@ case $selected in
     /usr/share/sway/scripts/grimshot --notify save screen;;
   output)
     /usr/share/sway/scripts/grimshot --notify save output;;
+  area)
+    /usr/share/sway/scripts/grimshot --notify save area;;
   area)
     /usr/share/sway/scripts/grimshot --notify save area;;
   window)
