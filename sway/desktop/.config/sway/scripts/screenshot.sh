@@ -13,8 +13,8 @@ case $selected in
     /usr/share/sway/scripts/grimshot --notify save output;;
   area)
     /usr/share/sway/scripts/grimshot --notify save area;;
-  area)
-    /usr/share/sway/scripts/grimshot --notify save area;;
+  copyarea)
+    /usr/share/sway/scripts/grimshot --notify copy area;;
   window)
     /usr/share/sway/scripts/grimshot --notify save window;;
 esac
