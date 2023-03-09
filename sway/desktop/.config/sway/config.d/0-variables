@@ -22,6 +22,8 @@ set $term-float alacritty
 # on the original workspace that the command was run on.
 set $menu wofi -c ~/.config/wofi/config -I
 
+set $emoji ~/.config/wofi/emoji.sh
+
 set $launcher nwg-drawer -c 7 -is 70 -spacing 23
 
 set $powermenu nwgbar

@@ -37,3 +37,6 @@ export BEMENU_BACKEND=wayland
 export QT_QPA_PLATFORM=wayland
 #export QT_WAYLAND_FORCE_DPI=physical
 #export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+
+# Asdf-vm
+. "$HOME/.asdf/asdf.sh"

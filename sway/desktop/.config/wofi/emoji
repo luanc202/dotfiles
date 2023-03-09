@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+# Prompt the user to select an Emoji
+# I had to manually set emoji-list path because sway wasnt reading it
+selection=$(wofi --dmenu --insensitive --width=800 --columns=4 --matching=multi-contains --prompt "Emoji" < ~/.config/wofi/emoji-list)
+
+# If a selection was made
+if [ -n "$selection" ]; then
+    # Retreive the Emoji from the selection string
+    emoji=$(echo "$selection" | cut -d ':' -f 1 | tr -d '\n')
+
+    # If wl-clipboard is installed
+    # copy with `wl-copy`
+    if command -v wl-copy $>/dev/null; then
+        wl-copy $emoji
+        notify-send "Wofmoji" "${emoji} Copied!"
+        exit 0
+    fi
+
+    # If xclip is installed
+    # copy with `xclip`
+    if command -v xclip $>/dev/null; then
+        echo -n $emoji | xclip
+        notify-send "Wofmoji" "${emoji} Copied!"
+        exit 0
+    fi
+
+    # If failed to copy, output Emoji to Stdout
+    printf ${emoji}
+fi
+
+exit 0
+
