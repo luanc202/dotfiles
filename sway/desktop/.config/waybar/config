@@ -64,7 +64,7 @@
 		"tooltip-format-deactivated": "{status}"
     },
     "tray": {
-        "icon-size": 14,
+        "icon-size": 16,
         "spacing": 5
     },
     "clock": {
@@ -81,14 +81,12 @@
 		}
 	},
     "gamemode": {
-		"format": "{glyph}",
-		"format-alt": "{glyph} {count}",
+		"format": "{icon}",
+		"format-alt": "{icon} {count}",
 		"glyph":  "",
-		"hide-not-running": true,
-		"use-icon": false,
+		"use-icon": true,
+        "hide-not-running": false,
 		"icon-name": "input-gaming-symbolic",
-		"icon-spacing": 2,
-		"icon-size": 14,
 		"tooltip": true,
 		"tooltip-format": "Games running: {count}"
 	},
