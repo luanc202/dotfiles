@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # Prompt the user to select an Emoji
-# I had to manually set emoji-list path because sway wasnt reading it
 selection=$(wofi --dmenu --insensitive --width=800 --columns=4 --matching=multi-contains --prompt "Emoji" < ~/.config/wofi/emoji-list)
 
 # If a selection was made
