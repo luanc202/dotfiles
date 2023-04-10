@@ -1,3 +1,4 @@
+@import "themes/mocha.css";
 window#waybar {
 	background: shade(alpha(@mantle, 0.9), 1.0);
 	border-bottom: shade(alpha(@base, 0.9), 1.0);
@@ -14,13 +15,12 @@ window#waybar.hidden {
 #workspaces {
 	margin: 0 4px;
 }
-@import "themes/mocha.css";
 
 * {
 	border: none;
 	border-radius: 6px;
 	/* `otf-font-awesome` is required to be installed for icons */
-	font-family: MesloLGS, Hack;
+	font-family: Symbols Nerd Font, SF Pro Display, Noto Sans CJK JP;
 	font-size: 14px;
 	font-weight: normal;
 }
@@ -81,27 +81,44 @@ tooltip label {
 
 #cpu,
 #memory,
-#network,
-#bluetooth,
-#pulseaudio,
-#idle_inhibitor,
-#tray,
 #gamemode,
+#custom-pacman,
 #clock {
+    padding: 0 10px;
 	color: @white;
 }
 
-#cpu,
-#memory,
-#network,
-#bluetooth,
-#pulseaudio,
+#idle_inhibitor,
 #tray,
-#battery,
-#backlight,
-#gamemode {
-	padding-right: 5px;
+#bluetooth {
+    padding: 0 2px;
 }
+
+#network {
+	margin: 0px 5px 0px 30px;
+}
+
+#bluetooth {
+	margin: 0px 5px 0px 0px;
+}
+
+#bluetooth.connected {
+	color: @blue;
+	margin: 0px 5px 0px 0px; 
+}
+
+#pulseaudio {
+	margin: 0px 5px 0px 0px;
+}
+
+#custom-launcher {
+    margin-left: 12px;
+}
+
+/* Extra margin for some bar elements */
+#cpu,
+#custom-pacman,
+
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces { 
