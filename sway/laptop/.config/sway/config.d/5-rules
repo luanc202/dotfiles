@@ -1,51 +1,66 @@
-# Rules
-# Title format for windows
-for_window [shell="xdg_shell"] title_format "%title (%app_id)"
-for_window [shell="xwayland"] title_format "%class - %title"
+# set floating (nontiling)for apps needing it:
+for_window [class="Yad" instance="yad"] floating enable
+for_window [app_id="yad"] floating enable
+for_window [app_id="blueman-manager"] floating enable,  resize set width 40 ppt height 30 ppt
 
-## Windows opacity
-#set $opacity 0.95
-#for_window [class=".*"] opacity $opacity
-#for_window [app_id=".*"] opacity $opacity
+# set floating (nontiling) for special apps:
+for_window [class="Xsane" instance="xsane"] floating enable
+for_window [app_id="pavucontrol" ] floating enable, resize set width 40 ppt height 30 ppt
+for_window [class="qt5ct" instance="qt5ct"] floating enable, resize set width 60 ppt height 50 ppt
+for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
+for_window [app_id="pamac-manager"] floating enable, resize set width 80 ppt height 70 ppt
+for_window [class="Lxappearance"] floating enable, resize set width 60 ppt height 50 ppt
 
-#for_window [app_id="firefox"] opacity 1.0
-#for_window [class="firefox"] opacity 1.0
-#for_window [class="mpv"] opacity 1.0
-#for_window [class="Gimp-2.10"] opacity 1.0
-#for_window [app_id="foot"] opacity 1.0
-
-# Assign workspaces
-for_window [app_id="discord"] move to workspace $ws7, workspace $ws7
-# Spotify xwayland
-for_window [class="Spotify"] move to workspace $ws9, workspace $ws9
-# Spotify wayland
-for_window [app_id="" title="^Spotify$"] move to workspace $ws9, workspace $ws9
-
-# Floating rules
-for_window [app_id="mpv"] floating enable
-for_window [app_id="mpv"] resize set 960 540
-for_window [app_id="mpv"] border pixel 0
-for_window [app_id="firefox" title="Firefox – Sharing Indicator"] floating enable
-for_window [app_id="firefox" title="Picture-in-Picture"] floating enable
-for_window [app_id="firefox" title="Pushbullet – Mozilla Firefox"] floating enable
-for_window [app_id="firefox" title="About Mozilla Firefox"] floating enable
-for_window [app_id="firefox" title="— Firefox"] floating enable
-for_window [app_id="firefox" title="^Firefox"] floating enable
+# set floating for window roles
+for_window [title="Garuda Settings Manager"] floating enable
+for_window [title="Garuda Welcome"] floating enable
+for_window [title="Garuda Gamer"] floating enable
+for_window [title="Garuda Assistant"] floating enable
+for_window [title="Steam - News"] floating enable
+for_window [title="Friends List"] floating enable
+for_window [title="Steam"] floating enable
+for_window [app_id="gedit"] floating enable
 for_window [app_id="eog"] floating enable
-for_window [app_id="org.telegram.desktop"] floating enable
-for_window [app_id="pavucontrol"] floating enable, resize set width 800 height 500
-for_window [window_role = "pop-up"] floating enable
-for_window [window_role = "bubble"] floating enable
-for_window [window_role = "dialog"] floating enable
-for_window [window_type = "dialog"] floating enable
-for_window [title="(?:Open|Save) (?:File|Folder|As)"] floating enable, resize set width 1030 height 710
-for_window [app_id="thunar" title="^Copying.*"] floating enable
-for_window [app_id="thunar" title="^File.*"] floating enable
-for_window [class="Steam"] floating enable
-for_window [class="Steam" title="^Steam$"] floating none
-for_window [class="kDrive"] fullscreen enable
+for_window [app_id="blueberry"] floating enable
+for_window [app_id="spotify"] floating enable
+for_window [title="Spotify"] floating enable
+for_window [app_id="steam"] floating enable
+for_window [app_id="discord"] floating enable
+for_window [app_id="Discord"] floating enable
+for_window [title="Amigos - Discord"] floating enable
+for_window [title="- Discord"] floating enable
+for_window [app_id="/opt/discord/Discord"] floating enable
+for_window [app_id="kdeconnect-settings"] floating enable
+for_window [app_id="kdeconnect-app"] floating enable
+for_window [app_id="file-roller"] floating enable, resize set width 40 ppt height 40 ppt
+for_window [app_id="kdeconnect-handler"] floating enable, sticky enable
+for_window [class="telegram-desktop"] floating enable, resize set width 50 ppt height 50 ppt
+for_window [app_id="telegram-desktop"] floating enable, resize set width 50 ppt height 50 ppt
+for_window [title="KDE Connect"] floating enable
+for_window [app_id="thunar"] floating enable
+for_window [app_id="qt5ct"] floating enable
+for_window [app_id="nwg-look"] floating enable
+for_window [app_id="gnome-system-monitor"] floating enable
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+for_window [window_role="About"] floating enable
+for_window [title="File Operation Progress"] floating enable, border pixel 1, sticky enable, resize set width 40 ppt height 30 ppt
+for_window [app_id="firefox" title="Library"] floating enable, border pixel 1, sticky enable, resize set width 40 ppt height 30 ppt
+for_window [app_id="floating_shell_portrait"] floating enable, border pixel 1, sticky enable, resize set width 30 ppt height 40 ppt
+for_window [title="Picture in picture"] floating enable, sticky enable
+for_window [title="nmtui"] floating enable,  resize set width 50 ppt height 70 ppt
+for_window [title="htop"] floating enable, resize set width 50 ppt height 70 ppt
+for_window [app_id="xsensors"] floating enable
+for_window [title="Save File"] floating enable
+for_window [app_id="firefox" title="firefox — Sharing Indicator"] kill
 
 # Inhibit idle
+for_window [app_id="firefox"] inhibit_idle fullscreen
+for_window [app_id="Chromium"] inhibit_idle fullscreen
 for_window [class="^.*"] inhibit_idle fullscreen
 for_window [app_id="^.*"] inhibit_idle fullscreen
 for_window [app_id="mpv"] inhibit_idle focus
