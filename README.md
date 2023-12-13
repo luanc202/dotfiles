@@ -21,7 +21,7 @@
 
 ### Installation 
 
-    First of all, this is a cute disclaimer. All of this settings are installed in Artix and in wayland only! I don't know how it work in other distro.
+    Some of these WMs are not in the official repos, so you'll have to build them from source, good luck!
 
 # Packages needed
 - rofi
