@@ -1,0 +1,1 @@
+/home/luan/.asdf/completions/asdf.fish
